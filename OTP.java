@@ -1,3 +1,7 @@
+//IU2141230195 PATEL PUJAN GOVINDBHAI
+//IU2141230208 PATEL VEDANT PRAKASHKUMAR
+//JAVA program to make a randomized OTP generator
+
 import java.util.*;
 
 class OTP {
@@ -10,15 +14,15 @@ class OTP {
         Vector<Integer> v = new Vector<Integer>(n);
 
         for (int i = 0; i < n; ++i) {
-            int rand = r.nextInt() % 10;
+            int rand = r.nextInt() % 10; // to generate random numbers between 0-9
             rand = Math.abs(rand); //to convert into positive number if negative
-            v.add(rand);
+            v.add(rand); //pushing the generated number into the vector conatiner
         }
 
         System.out.print("   OTP = ");
 
         for (int i : v) {
-            System.out.print(i);
+            System.out.print(i); //printing the contents of vector container using FOR-EACH loop
         }
 
     }
