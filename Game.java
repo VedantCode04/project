@@ -122,7 +122,7 @@ class Game {
         Random r = new Random();
         Scanner s = new Scanner(System.in);
 
-        int rand = Math.abs(r.nextInt() % 13 + 1);
+        int rand = Math.abs(r.nextInt() % 12 + 1);
         long  fact = 1;
         for (int i = 1; i <= rand; ++i) {
             fact = fact * i;
