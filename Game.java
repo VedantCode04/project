@@ -31,7 +31,8 @@ class Game {
             score = score + 5;
             System.out.println("Correct answer. Your score is " + score);
         } else {
-            System.out.println("Ooops, incorrect answer. ");
+            score = score - 5;
+            System.out.println("Ooops, incorrect answer, Correct ans is: " + sum + " Score is " + score);
         }
     }
 
@@ -64,7 +65,8 @@ class Game {
             score = score + 5;
             System.out.println("Correct answer. Your score is " + score);
         } else {
-            System.out.println("Ooops, incorrect answer. ");
+            score = score - 5;
+            System.out.println("Ooops, incorrect answer, Correct ans is: " + sum + " Score is " + score);
         }
     }
 
@@ -75,7 +77,7 @@ class Game {
         int rand;
 
         float arr[] = new float[2];
-        arr[0] = (Math.abs(r.nextInt() % 20 + 1)) ;
+        arr[0] = (Math.abs(r.nextInt() % 20 + 1));
         arr[1] = (Math.abs(r.nextInt() % 5) + 1);
         double sum = arr[0] / arr[1];
         System.out.print(arr[0] + " / " + arr[1] + " = ");
@@ -85,7 +87,8 @@ class Game {
             score = score + 15;
             System.out.println("Correct answer. Your score is " + score);
         } else {
-            System.out.println("Ooops, incorrect answer. ");
+            score = score - 10;
+            System.out.println("Ooops, incorrect answer, Correct ans is: " + sum + " Score is " + score);
         }
     }
 
@@ -113,7 +116,8 @@ class Game {
             score = score + 10;
             System.out.println("Correct answer. Your score is " + score);
         } else {
-            System.out.println("Ooops, incorrect answer. ");
+            score = score - 10;
+            System.out.println("Ooops, incorrect answer, Correct ans is: " + sum + " Score is " + score);
         }
     }
 
@@ -123,16 +127,18 @@ class Game {
         Scanner s = new Scanner(System.in);
 
         int rand = Math.abs(r.nextInt() % 12 + 1);
-        long  fact = 1;
+        long fact = 1;
         for (int i = 1; i <= rand; ++i) {
             fact = fact * i;
         }
         System.out.print(rand + "! = ");
-        long  ans = s.nextInt();
+        long ans = s.nextInt();
         if (ans == fact) {
+            score = score + 10;
             System.out.println("Correct answer. Your score is " + score);
         } else {
-            System.out.println("Incorrect answer. ");
+            score = score - 10;
+            System.out.println("Ooops, incorrect answer, Correct ans is: " + fact + " Score is " + score);
         }
     }
 
