@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffbcd9;
+    font-size: 3rem;
+}
+
+.container {
+    width: 70rem;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    font-weight: 700;
+    font-size: 4rem;
+    padding: 1.5rem 1.175rem;
+    text-align: center;
+    border-bottom: 0.2rem solid black;
+}
+
+.main {
+    margin: 2rem 4rem;
+}
+
+.main .inputbox {
+    position: relative;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 5.3rem;
+    font-size: 3rem;
+    font-weight: 600;
+    border: 0.2rem solid rgb(179, 179, 179);
+    border-radius: 0.5rem;
+    padding: 1.3rem;
+}
+
+.inputbox span {
+    position: absolute;
+    right: 1.3rem;
+    font-size: 3.5rem;
+    line-height: 5.3rem;
+    transition: 0.3s;
+}
+
+.inputbox span:hover {
+    transform: scale(0.8);
+}
+
+.strength {
+    width: 100%;
+    height: 0.5rem;
+    background-color: rgb(226, 226, 226);
+    margin: 1.6rem 0 0 0;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.strength #weak {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: inherit;
+    background-color: #ff0707;
+    transition: visibility 0.3s, opacity 0.5s linear;
+}
+
+.strength #medium {
+    top: 0;
+    position: absolute;
+    width: 65%;
+    height: inherit;
+    background-color: rgb(255, 123, 0);
+    visibility: hidden;
+    transition: visibility 0.3s, opacity 0.5s linear;
+    
+} 
+
+.strength #strong {
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    background-color: rgb(17, 248, 0);
+    visibility: hidden;
+    transition: visibility 0.3s, opacity 0.5s linear;
+    
+}
+
+.password-box {
+    margin: 2rem 0 0 0;
+}
+
+.password-box .passlength {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password-box input {
+    cursor: pointer;
+    width: 100%;
+    background: #ef9cc0;
+}
+
+.pass-options .options {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.pass-options .options .list:first-child {
+    pointer-events: none;
+}
+
+.pass-options .options .list:first-child input {
+    opacity: 0.5;
+}
+
+.options .list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+.options .list input {
+    accent-color: #ff0772;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.options .list input:hover {
+    transform: scale(0.9);
+}
+
+.list label {
+    margin: 0 0 0 1rem;
+}
+
+.list input {
+    width: 2.3rem;
+    height: 2.3rem;
+}
+
+.generate {
+    width: 100%;
+    height: 6rem;
+    font-size: 4rem;
+    background-color: #ff0772;
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+.generate:hover {
+    transform: scale(0.94);
+}
+
+/* #weak{
+    width: 100%;
+    background-color: rgb(207, 0, 0);
+    position: absolute;
+}
+
+#medium{
+    width: 70%;
+    background-color: rgb(207, 162, 0);
+}
+
+#strong{
+    width: 100%;
+    background-color: rgb(38, 207, 0);
+}
+ */
+
+@media (max-width: 998px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 30%;
+    }
+}

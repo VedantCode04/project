@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>Pass Shield by Vedant</h2>
+        <div class="main">
+            <div class="inputbox">
+                <input type="text" value="Password" disabled>
+                <span class="material-symbols-outlined" id="copy">
+                    content_copy
+                </span>
+            </div>
+
+            <div class="strength">
+                <div id="weak"></div>
+                <div id="medium"></div>
+                <div id="strong"></div>
+            </div>
+
+            <div class="password-box">
+                <div class="passlength">
+                    <label class="indicator">Password length </label>
+                    <span class="length">8</span>
+                </div>
+                <input type="range" min="1" max="30" step="1" value="8">
+            </div>
+
+            <div class="pass-options">
+                <ul class="options">
+                    <li class="list">
+                        <input type="checkbox" id="lowercase" checked >
+                        <label for="uppercase">Lowercase (a-z)</label>
+                    </li>
+                    <li class="list">
+                        <input type="checkbox" id="uppercase" onclick="generate()">
+                        <label for="uppercase">Uppercase (A-Z)</label>
+                    </li>
+                    <li class="list">
+                        <input type="checkbox" id="numbers" onclick="generate()">
+                        <label for="uppercase">Numbers (0-9)</label>
+                    </li>
+                    <li class="list">
+                        <input type="checkbox" id="specialcharacters" onclick="generate()">
+                        <label for="uppercase">Special Characters</label>
+                    </li>
+                    <!-- <li class="list">
+                        <input type="checkbox" id="no-duplicates">
+                        <label for="uppercase">No Duplicates</label>
+                    </li> -->
+                </ul>
+            </div>
+
+            <button class="generate">Generate Password</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
